@@ -1,0 +1,1120 @@
+{
+  "generated_at_utc": "2026-10-11",
+  "audit": {
+    "n_rows": 7043,
+    "n_columns": 21,
+    "blank_by_column": {
+      "TotalCharges": 11
+    },
+    "nan_total": 0,
+    "duplicate_ids": 0,
+    "duplicate_rows_excl_id": 22,
+    "duplicate_rows_full": 0,
+    "type_issues": {
+      "SeniorCitizen": {
+        "n_non_numeric": 0,
+        "examples": []
+      },
+      "tenure": {
+        "n_non_numeric": 0,
+        "examples": []
+      },
+      "MonthlyCharges": {
+        "n_non_numeric": 0,
+        "examples": []
+      },
+      "TotalCharges": {
+        "n_non_numeric": 11,
+        "examples": [
+          "' '"
+        ]
+      }
+    },
+    "total_charges_blank": 11,
+    "total_charges_blank_tenures": [
+      0
+    ],
+    "tenure_zero_rows": 11,
+    "categorical_levels": {
+      "gender": [
+        "Female",
+        "Male"
+      ],
+      "SeniorCitizen": [
+        "0",
+        "1"
+      ],
+      "Partner": [
+        "No",
+        "Yes"
+      ],
+      "Dependents": [
+        "No",
+        "Yes"
+      ],
+      "PhoneService": [
+        "No",
+        "Yes"
+      ],
+      "MultipleLines": [
+        "No",
+        "No phone service",
+        "Yes"
+      ],
+      "InternetService": [
+        "DSL",
+        "Fiber optic",
+        "No"
+      ],
+      "OnlineSecurity": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "OnlineBackup": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "DeviceProtection": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "TechSupport": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "StreamingTV": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "StreamingMovies": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "Contract": [
+        "Month-to-month",
+        "One year",
+        "Two year"
+      ],
+      "PaperlessBilling": [
+        "No",
+        "Yes"
+      ],
+      "PaymentMethod": [
+        "Bank transfer (automatic)",
+        "Credit card (automatic)",
+        "Electronic check",
+        "Mailed check"
+      ],
+      "Churn": [
+        "No",
+        "Yes"
+      ]
+    },
+    "whitespace_cells": 0,
+    "outliers_iqr": {
+      "tenure": {
+        "q1": 9.0,
+        "q3": 55.0,
+        "lower_fence": -60.0,
+        "upper_fence": 124.0,
+        "n_outliers": 0,
+        "min": 0.0,
+        "max": 72.0
+      },
+      "MonthlyCharges": {
+        "q1": 35.5,
+        "q3": 89.85,
+        "lower_fence": -46.02499999999999,
+        "upper_fence": 171.375,
+        "n_outliers": 0,
+        "min": 18.25,
+        "max": 118.75
+      },
+      "TotalCharges": {
+        "q1": 401.45,
+        "q3": 3794.7375,
+        "lower_fence": -4688.481250000001,
+        "upper_fence": 8884.66875,
+        "n_outliers": 0,
+        "min": 18.8,
+        "max": 8684.8
+      }
+    },
+    "total_vs_expected_ratio": {
+      "median": 1.0,
+      "p01": 0.8546423895559796,
+      "p99": 1.1590690350362103,
+      "share_within_20pct": 0.9916097838452788
+    },
+    "churn_yes": 1869,
+    "churn_share": 0.2653698707936959
+  },
+  "overall": {
+    "customers": 7043.0,
+    "churned": 1869.0,
+    "churn_rate": 0.2653698707936959,
+    "monthly_revenue": 456116.6,
+    "avg_monthly_charge": 64.76169246059918,
+    "churned_monthly_revenue": 139130.85,
+    "annual_revenue_at_risk": 1669570.2000000002,
+    "share_of_revenue_churned": 0.3050335155528214
+  },
+  "by_contract": [
+    {
+      "category": "Month-to-month",
+      "sort_order": 1,
+      "customers": 3875,
+      "share_of_customers": 0.5501916797,
+      "churned": 1655,
+      "churn_rate": 0.4270967742,
+      "avg_monthly_charge": 66.3984903226,
+      "annual_revenue_at_risk": 1450165.2000000002,
+      "share_of_revenue_at_risk": 0.8685859391
+    },
+    {
+      "category": "One year",
+      "sort_order": 2,
+      "customers": 1473,
+      "share_of_customers": 0.2091438308,
+      "churned": 166,
+      "churn_rate": 0.1126951799,
+      "avg_monthly_charge": 65.0486082824,
+      "annual_revenue_at_risk": 169421.4,
+      "share_of_revenue_at_risk": 0.1014760565
+    },
+    {
+      "category": "Two year",
+      "sort_order": 3,
+      "customers": 1695,
+      "share_of_customers": 0.2406644896,
+      "churned": 48,
+      "churn_rate": 0.0283185841,
+      "avg_monthly_charge": 60.7704129794,
+      "annual_revenue_at_risk": 49983.6,
+      "share_of_revenue_at_risk": 0.0299380044
+    }
+  ],
+  "by_tenure_bucket": [
+    {
+      "category": "0-6 months",
+      "sort_order": 1,
+      "customers": 1481,
+      "share_of_customers": 0.2102797104,
+      "churned": 784,
+      "churn_rate": 0.5293720459,
+      "avg_monthly_charge": 54.7386563133,
+      "annual_revenue_at_risk": 598753.2,
+      "share_of_revenue_at_risk": 0.3586271485
+    },
+    {
+      "category": "7-12 months",
+      "sort_order": 2,
+      "customers": 705,
+      "share_of_customers": 0.1000993895,
+      "churned": 253,
+      "churn_rate": 0.3588652482,
+      "avg_monthly_charge": 58.9529078014,
+      "annual_revenue_at_risk": 228697.8,
+      "share_of_revenue_at_risk": 0.1369800443
+    },
+    {
+      "category": "13-24 months",
+      "sort_order": 3,
+      "customers": 1024,
+      "share_of_customers": 0.1453925884,
+      "churned": 294,
+      "churn_rate": 0.287109375,
+      "avg_monthly_charge": 61.3572753906,
+      "annual_revenue_at_risk": 276979.8,
+      "share_of_revenue_at_risk": 0.1658988643
+    },
+    {
+      "category": "25-48 months",
+      "sort_order": 4,
+      "customers": 1594,
+      "share_of_customers": 0.2263240097,
+      "churned": 325,
+      "churn_rate": 0.2038895859,
+      "avg_monthly_charge": 65.9305520703,
+      "annual_revenue_at_risk": 329550.0,
+      "share_of_revenue_at_risk": 0.1973861297
+    },
+    {
+      "category": "49-72 months",
+      "sort_order": 5,
+      "customers": 2239,
+      "share_of_customers": 0.3179043021,
+      "churned": 213,
+      "churn_rate": 0.0951317552,
+      "avg_monthly_charge": 73.9453774006,
+      "annual_revenue_at_risk": 235589.4,
+      "share_of_revenue_at_risk": 0.1411078133
+    }
+  ],
+  "by_payment_method": [
+    {
+      "category": "Electronic check",
+      "payment_type": "Manual",
+      "sort_order": 1,
+      "customers": 2365,
+      "share_of_customers": 0.3357944058,
+      "churned": 1071,
+      "churn_rate": 0.4528541226,
+      "avg_monthly_charge": 76.2558139535,
+      "annual_revenue_at_risk": 1011465.0,
+      "share_of_revenue_at_risk": 0.6058235826
+    },
+    {
+      "category": "Mailed check",
+      "payment_type": "Manual",
+      "sort_order": 2,
+      "customers": 1612,
+      "share_of_customers": 0.2288797387,
+      "churned": 308,
+      "churn_rate": 0.1910669975,
+      "avg_monthly_charge": 43.9170595533,
+      "annual_revenue_at_risk": 201643.2,
+      "share_of_revenue_at_risk": 0.1207755146
+    },
+    {
+      "category": "Bank transfer (automatic)",
+      "payment_type": "Automatic",
+      "sort_order": 3,
+      "customers": 1544,
+      "share_of_customers": 0.2192247622,
+      "churned": 258,
+      "churn_rate": 0.1670984456,
+      "avg_monthly_charge": 67.1926489637,
+      "annual_revenue_at_risk": 241102.8,
+      "share_of_revenue_at_risk": 0.1444101003
+    },
+    {
+      "category": "Credit card (automatic)",
+      "payment_type": "Automatic",
+      "sort_order": 4,
+      "customers": 1522,
+      "share_of_customers": 0.2161010933,
+      "churned": 232,
+      "churn_rate": 0.1524310118,
+      "avg_monthly_charge": 66.5123850197,
+      "annual_revenue_at_risk": 215359.2,
+      "share_of_revenue_at_risk": 0.1289908025
+    }
+  ],
+  "by_internet_service": [
+    {
+      "category": "Fiber optic",
+      "sort_order": 1,
+      "customers": 3096,
+      "share_of_customers": 0.4395854039,
+      "churned": 1297,
+      "churn_rate": 0.4189276486,
+      "avg_monthly_charge": 91.500129199,
+      "annual_revenue_at_risk": 1371600.6,
+      "share_of_revenue_at_risk": 0.8215291576
+    },
+    {
+      "category": "DSL",
+      "sort_order": 2,
+      "customers": 2421,
+      "share_of_customers": 0.343745563,
+      "churned": 459,
+      "churn_rate": 0.1895910781,
+      "avg_monthly_charge": 58.1021685254,
+      "annual_revenue_at_risk": 270350.4,
+      "share_of_revenue_at_risk": 0.1619281417
+    },
+    {
+      "category": "No",
+      "sort_order": 3,
+      "customers": 1526,
+      "share_of_customers": 0.2166690331,
+      "churned": 113,
+      "churn_rate": 0.0740498034,
+      "avg_monthly_charge": 21.0791939712,
+      "annual_revenue_at_risk": 27619.2,
+      "share_of_revenue_at_risk": 0.0165427006
+    }
+  ],
+  "addons": [
+    {
+      "category": "Online security",
+      "customers_with": 2019,
+      "churn_rate_with": 0.1461119366,
+      "customers_without": 3498,
+      "churn_rate_without": 0.4176672384,
+      "churn_gap": 0.2715553018
+    },
+    {
+      "category": "Tech support",
+      "customers_with": 2044,
+      "churn_rate_with": 0.1516634051,
+      "customers_without": 3473,
+      "churn_rate_without": 0.4163547365,
+      "churn_gap": 0.2646913315
+    },
+    {
+      "category": "Online backup",
+      "customers_with": 2429,
+      "churn_rate_with": 0.2153149444,
+      "customers_without": 3088,
+      "churn_rate_without": 0.3992875648,
+      "churn_gap": 0.1839726203
+    },
+    {
+      "category": "Device protection",
+      "customers_with": 2422,
+      "churn_rate_with": 0.2250206441,
+      "customers_without": 3095,
+      "churn_rate_without": 0.391276252,
+      "churn_gap": 0.1662556079
+    },
+    {
+      "category": "Streaming movies",
+      "customers_with": 2732,
+      "churn_rate_with": 0.2994143485,
+      "customers_without": 2785,
+      "churn_rate_without": 0.3368043088,
+      "churn_gap": 0.0373899603
+    },
+    {
+      "category": "Streaming TV",
+      "customers_with": 2707,
+      "churn_rate_with": 0.300701884,
+      "customers_without": 2810,
+      "churn_rate_without": 0.3352313167,
+      "churn_gap": 0.0345294327
+    }
+  ],
+  "by_service_count": [
+    {
+      "category": 1,
+      "sort_order": 1,
+      "customers": 1264,
+      "share_of_customers": 0.1794689763,
+      "churned": 138,
+      "churn_rate": 0.1091772152,
+      "avg_monthly_charge": 20.2683544304
+    },
+    {
+      "category": 2,
+      "sort_order": 2,
+      "customers": 859,
+      "share_of_customers": 0.1219650717,
+      "churned": 266,
+      "churn_rate": 0.3096623981,
+      "avg_monthly_charge": 42.0008731083
+    },
+    {
+      "category": 3,
+      "sort_order": 3,
+      "customers": 846,
+      "share_of_customers": 0.1201192674,
+      "churned": 380,
+      "churn_rate": 0.4491725768,
+      "avg_monthly_charge": 61.7000591017
+    },
+    {
+      "category": 4,
+      "sort_order": 4,
+      "customers": 965,
+      "share_of_customers": 0.1370154764,
+      "churned": 352,
+      "churn_rate": 0.3647668394,
+      "avg_monthly_charge": 69.3560103627
+    },
+    {
+      "category": 5,
+      "sort_order": 5,
+      "customers": 922,
+      "share_of_customers": 0.1309101235,
+      "churned": 289,
+      "churn_rate": 0.3134490239,
+      "avg_monthly_charge": 78.726681128
+    },
+    {
+      "category": 6,
+      "sort_order": 6,
+      "customers": 908,
+      "share_of_customers": 0.1289223342,
+      "churned": 232,
+      "churn_rate": 0.2555066079,
+      "avg_monthly_charge": 86.3065528634
+    },
+    {
+      "category": 7,
+      "sort_order": 7,
+      "customers": 676,
+      "share_of_customers": 0.0959818259,
+      "churned": 152,
+      "churn_rate": 0.224852071,
+      "avg_monthly_charge": 93.6423816568
+    },
+    {
+      "category": 8,
+      "sort_order": 8,
+      "customers": 395,
+      "share_of_customers": 0.0560840551,
+      "churned": 49,
+      "churn_rate": 0.1240506329,
+      "avg_monthly_charge": 99.4272151899
+    },
+    {
+      "category": 9,
+      "sort_order": 9,
+      "customers": 208,
+      "share_of_customers": 0.0295328695,
+      "churned": 11,
+      "churn_rate": 0.0528846154,
+      "avg_monthly_charge": 104.6322115385
+    }
+  ],
+  "retention": {
+    "milestones": [
+      6,
+      12,
+      24,
+      36,
+      48,
+      60
+    ],
+    "min_at_risk": 30,
+    "overall": {
+      "6": 0.8848262389332727,
+      "12": 0.8431995538158313,
+      "24": 0.7887363983705988,
+      "36": 0.7485454148763729,
+      "48": 0.7088401843460784,
+      "60": 0.6644039143747426
+    },
+    "by_contract": {
+      "Month-to-month": {
+        "6": 0.7858348940504872,
+        "12": 0.703096636348866,
+        "24": 0.5859154739046674,
+        "36": 0.4911039695248377,
+        "48": 0.39726377900972804,
+        "60": 0.29715813465993735
+      },
+      "One year": {
+        "6": 0.9972564264704987,
+        "12": 0.9908082040748656,
+        "24": 0.9782723764279151,
+        "36": 0.9593071274706111,
+        "48": 0.9165468041589909,
+        "60": 0.8318260847305994
+      },
+      "Two year": {
+        "6": 1.0,
+        "12": 1.0,
+        "24": 1.0,
+        "36": 0.9986759658872695,
+        "48": 0.9957189309720451,
+        "60": 0.9861995455959088
+      }
+    },
+    "first_month_hazard": 0.0540386803185438
+  },
+  "segments": [
+    {
+      "segment": "New High-Spend",
+      "sort_order": 1,
+      "customers": 831,
+      "share_of_customers": 0.1179894931,
+      "churned": 572,
+      "churn_rate": 0.6883273165,
+      "avg_tenure_months": 4.6630565584,
+      "avg_services": 3.9205776173,
+      "avg_monthly_charge": 82.7406738869,
+      "avg_monthly_charge_churned": 83.5191433566,
+      "avg_monthly_charge_retained": 81.0214285714,
+      "monthly_revenue": 68757.5,
+      "share_of_revenue": 0.1507454454,
+      "annual_revenue_at_risk": 573275.3999999999,
+      "share_of_revenue_at_risk": 0.3433670534,
+      "rule": "Tenure under 12 months and monthly charge of $70 or more",
+      "action": "Spend here first. Offer a discount for moving from month-to-month to a one-year contract while they are still in their first year. When to make the offer: [PLACEHOLDER]."
+    },
+    {
+      "segment": "New Standard",
+      "sort_order": 2,
+      "customers": 1238,
+      "share_of_customers": 0.1757773676,
+      "churned": 427,
+      "churn_rate": 0.344911147,
+      "avg_tenure_months": 4.0904684976,
+      "avg_services": 2.1744749596,
+      "avg_monthly_charge": 38.1441033926,
+      "avg_monthly_charge_churned": 42.7385245902,
+      "avg_monthly_charge_retained": 35.7250924784,
+      "monthly_revenue": 47222.4,
+      "share_of_revenue": 0.1035314216,
+      "annual_revenue_at_risk": 218992.2,
+      "share_of_revenue_at_risk": 0.1311668117,
+      "rule": "Tenure under 12 months and monthly charge under $70",
+      "action": "Cheap onboarding, not discounts. A setup check and a free trial of tech support or online security."
+    },
+    {
+      "segment": "Established Thin Bundle",
+      "sort_order": 3,
+      "customers": 499,
+      "share_of_customers": 0.0708504898,
+      "churned": 199,
+      "churn_rate": 0.3987975952,
+      "avg_tenure_months": 30.5511022044,
+      "avg_services": 3.5571142285,
+      "avg_monthly_charge": 80.1584168337,
+      "avg_monthly_charge_churned": 80.385678392,
+      "avg_monthly_charge_retained": 80.0076666667,
+      "monthly_revenue": 39999.05,
+      "share_of_revenue": 0.0876947912,
+      "annual_revenue_at_risk": 191961.0,
+      "share_of_revenue_at_risk": 0.1149762975,
+      "rule": "Tenure 12 months or more, monthly charge of $70 or more, 4 or fewer services",
+      "action": "Paying a lot for not much. Check the plan fits. Add security or support at no extra cost so the bill feels worth it."
+    },
+    {
+      "segment": "Established Full Bundle",
+      "sort_order": 4,
+      "customers": 2261,
+      "share_of_customers": 0.321027971,
+      "churned": 503,
+      "churn_rate": 0.2224679345,
+      "avg_tenure_months": 49.9168509509,
+      "avg_services": 6.7019018134,
+      "avg_monthly_charge": 95.1374391862,
+      "avg_monthly_charge_churned": 97.8355864811,
+      "avg_monthly_charge_retained": 94.365443686,
+      "monthly_revenue": 215105.75,
+      "share_of_revenue": 0.4716025464,
+      "annual_revenue_at_risk": 590535.6000000001,
+      "share_of_revenue_at_risk": 0.3537051632,
+      "rule": "Tenure 12 months or more, monthly charge of $70 or more, 5 or more services",
+      "action": "The most valuable group. Don't discount. Look after them and get in touch before contracts come up for renewal."
+    },
+    {
+      "segment": "Established Low-Spend",
+      "sort_order": 5,
+      "customers": 2214,
+      "share_of_customers": 0.3143546784,
+      "churned": 168,
+      "churn_rate": 0.0758807588,
+      "avg_tenure_months": 41.0767841012,
+      "avg_services": 2.8563685637,
+      "avg_monthly_charge": 38.4064588979,
+      "avg_monthly_charge_churned": 47.0267857143,
+      "avg_monthly_charge_retained": 37.6986314761,
+      "monthly_revenue": 85031.9,
+      "share_of_revenue": 0.1864257955,
+      "annual_revenue_at_risk": 94806.0,
+      "share_of_revenue_at_risk": 0.0567846743,
+      "rule": "Tenure 12 months or more and monthly charge under $70",
+      "action": "Stable and cheap to keep. Spend little. Try selling one add-on through the bill."
+    }
+  ],
+  "segment_contract_mix": [
+    {
+      "segment": "Established Full Bundle",
+      "contract": "Month-to-month",
+      "customers": 860,
+      "share_of_segment": 0.3803626714,
+      "churn_rate": 0.4081395349,
+      "share_fiber": 0.9348837209
+    },
+    {
+      "segment": "Established Full Bundle",
+      "contract": "One year",
+      "customers": 653,
+      "share_of_segment": 0.2888102609,
+      "churn_rate": 0.1776416539,
+      "share_fiber": 0.7320061256
+    },
+    {
+      "segment": "Established Full Bundle",
+      "contract": "Two year",
+      "customers": 748,
+      "share_of_segment": 0.3308270677,
+      "churn_rate": 0.0481283422,
+      "share_fiber": 0.550802139
+    },
+    {
+      "segment": "Established Low-Spend",
+      "contract": "Month-to-month",
+      "customers": 681,
+      "share_of_segment": 0.3075880759,
+      "churn_rate": 0.1806167401,
+      "share_fiber": 0.0323054332
+    },
+    {
+      "segment": "Established Low-Spend",
+      "contract": "One year",
+      "customers": 661,
+      "share_of_segment": 0.2985546522,
+      "churn_rate": 0.0514372163,
+      "share_fiber": 0.0
+    },
+    {
+      "segment": "Established Low-Spend",
+      "contract": "Two year",
+      "customers": 872,
+      "share_of_segment": 0.3938572719,
+      "churn_rate": 0.0126146789,
+      "share_fiber": 0.001146789
+    },
+    {
+      "segment": "Established Thin Bundle",
+      "contract": "Month-to-month",
+      "customers": 426,
+      "share_of_segment": 0.8537074148,
+      "churn_rate": 0.4460093897,
+      "share_fiber": 1.0
+    },
+    {
+      "segment": "Established Thin Bundle",
+      "contract": "One year",
+      "customers": 57,
+      "share_of_segment": 0.1142284569,
+      "churn_rate": 0.1403508772,
+      "share_fiber": 1.0
+    },
+    {
+      "segment": "Established Thin Bundle",
+      "contract": "Two year",
+      "customers": 16,
+      "share_of_segment": 0.0320641283,
+      "churn_rate": 0.0625,
+      "share_fiber": 1.0
+    },
+    {
+      "segment": "New High-Spend",
+      "contract": "Month-to-month",
+      "customers": 818,
+      "share_of_segment": 0.9843561974,
+      "churn_rate": 0.6968215159,
+      "share_fiber": 0.9706601467
+    },
+    {
+      "segment": "New High-Spend",
+      "contract": "One year",
+      "customers": 8,
+      "share_of_segment": 0.0096269555,
+      "churn_rate": 0.25,
+      "share_fiber": 0.5
+    },
+    {
+      "segment": "New High-Spend",
+      "contract": "Two year",
+      "customers": 5,
+      "share_of_segment": 0.0060168472,
+      "churn_rate": 0.0,
+      "share_fiber": 0.0
+    },
+    {
+      "segment": "New Standard",
+      "contract": "Month-to-month",
+      "customers": 1090,
+      "share_of_segment": 0.8804523425,
+      "churn_rate": 0.3862385321,
+      "share_fiber": 0.0752293578
+    },
+    {
+      "segment": "New Standard",
+      "contract": "One year",
+      "customers": 94,
+      "share_of_segment": 0.0759289176,
+      "churn_rate": 0.0638297872,
+      "share_fiber": 0.0
+    },
+    {
+      "segment": "New Standard",
+      "contract": "Two year",
+      "customers": 54,
+      "share_of_segment": 0.0436187399,
+      "churn_rate": 0.0,
+      "share_fiber": 0.0
+    }
+  ],
+  "model": {
+    "n_train": 5282,
+    "n_test": 1761,
+    "test_churn_rate": 0.26519023282226006,
+    "metric_name": "ROC AUC",
+    "roc_auc": 0.8450036240397949,
+    "roc_auc_contract_rule": 0.72918990299488,
+    "accuracy": 0.8006814310051107,
+    "majority_class_accuracy": 0.7348097671777399,
+    "precision_at_0_5": 0.6472081218274112,
+    "recall_at_0_5": 0.5460385438972163,
+    "top_decile_churn_rate": 0.7288135593220338,
+    "top_decile_lift": 2.748266976372809,
+    "excluded_features": {
+      "customer_id": "identifier",
+      "gender": "protected attribute; no business case for using it to target offers",
+      "total_charges": "almost exactly tenure x monthly charge, so it duplicates information already in the model",
+      "monthly_charges": "almost entirely determined by which services a customer holds (see services_explain_charges_r2); keeping both makes their coefficients fight each other and flip sign"
+    },
+    "drivers": [
+      {
+        "feature": "contract=Two year",
+        "label": "Contract: Two year (vs Month-to-month)",
+        "coefficient": -1.2659484496784783,
+        "odds_ratio": 0.2819717332758587,
+        "direction": "lowers risk",
+        "plain_english": "Contract: Two year (vs Month-to-month): odds of churning 72% lower"
+      },
+      {
+        "feature": "internet_service=Fiber optic",
+        "label": "Internet service: Fiber optic (vs DSL)",
+        "coefficient": 0.886672327771329,
+        "odds_ratio": 2.427039805618626,
+        "direction": "raises risk",
+        "plain_english": "Internet service: Fiber optic (vs DSL): odds of churning 2.43x higher"
+      },
+      {
+        "feature": "internet_service=No",
+        "label": "Internet service: No (vs DSL)",
+        "coefficient": -0.8605123049716057,
+        "odds_ratio": 0.4229453498004957,
+        "direction": "lowers risk",
+        "plain_english": "Internet service: No (vs DSL): odds of churning 58% lower"
+      },
+      {
+        "feature": "contract=One year",
+        "label": "Contract: One year (vs Month-to-month)",
+        "coefficient": -0.6968047505962185,
+        "odds_ratio": 0.498174555362706,
+        "direction": "lowers risk",
+        "plain_english": "Contract: One year (vs Month-to-month): odds of churning 50% lower"
+      },
+      {
+        "feature": "paperless_billing",
+        "label": "Uses paperless billing",
+        "coefficient": 0.4045602925396542,
+        "odds_ratio": 1.4986433904804952,
+        "direction": "raises risk",
+        "plain_english": "Uses paperless billing: odds of churning 1.50x higher"
+      },
+      {
+        "feature": "online_security",
+        "label": "Has online security",
+        "coefficient": -0.4025703632673822,
+        "odds_ratio": 0.6685992924402211,
+        "direction": "lowers risk",
+        "plain_english": "Has online security: odds of churning 33% lower"
+      },
+      {
+        "feature": "phone_service",
+        "label": "Has phone service",
+        "coefficient": -0.3865432720622049,
+        "odds_ratio": 0.6794013256421223,
+        "direction": "lowers risk",
+        "plain_english": "Has phone service: odds of churning 32% lower"
+      },
+      {
+        "feature": "tenure_months",
+        "label": "Each extra 12 months of tenure",
+        "coefficient": -0.38592971746960975,
+        "odds_ratio": 0.6798183033518987,
+        "direction": "lowers risk",
+        "plain_english": "Each extra 12 months of tenure: odds of churning 32% lower"
+      },
+      {
+        "feature": "tech_support",
+        "label": "Has tech support",
+        "coefficient": -0.3547579114349125,
+        "odds_ratio": 0.701343209829766,
+        "direction": "lowers risk",
+        "plain_english": "Has tech support: odds of churning 30% lower"
+      },
+      {
+        "feature": "payment_method=Electronic check",
+        "label": "Payment method: Electronic check (vs Bank transfer (automatic))",
+        "coefficient": 0.3499069436584441,
+        "odds_ratio": 1.4189355015027694,
+        "direction": "raises risk",
+        "plain_english": "Payment method: Electronic check (vs Bank transfer (automatic)): odds of churning 1.42x higher"
+      },
+      {
+        "feature": "multiple_lines",
+        "label": "Has multiple lines",
+        "coefficient": 0.313054693511901,
+        "odds_ratio": 1.367596327628163,
+        "direction": "raises risk",
+        "plain_english": "Has multiple lines: odds of churning 1.37x higher"
+      },
+      {
+        "feature": "streaming_movies",
+        "label": "Has streaming movies",
+        "coefficient": 0.31100292746895036,
+        "odds_ratio": 1.3647932165700785,
+        "direction": "raises risk",
+        "plain_english": "Has streaming movies: odds of churning 1.36x higher"
+      },
+      {
+        "feature": "streaming_tv",
+        "label": "Has streaming TV",
+        "coefficient": 0.25791203839330057,
+        "odds_ratio": 1.294224971509299,
+        "direction": "raises risk",
+        "plain_english": "Has streaming TV: odds of churning 1.29x higher"
+      },
+      {
+        "feature": "dependents",
+        "label": "Has dependents",
+        "coefficient": -0.23050817184444655,
+        "odds_ratio": 0.7941299454693316,
+        "direction": "lowers risk",
+        "plain_english": "Has dependents: odds of churning 21% lower"
+      },
+      {
+        "feature": "senior_citizen",
+        "label": "Is a senior citizen",
+        "coefficient": 0.18658664227645536,
+        "odds_ratio": 1.2051290326852593,
+        "direction": "raises risk",
+        "plain_english": "Is a senior citizen: odds of churning 1.21x higher"
+      },
+      {
+        "feature": "online_backup",
+        "label": "Has online backup",
+        "coefficient": -0.13727028531389948,
+        "odds_ratio": 0.8717345772334811,
+        "direction": "lowers risk",
+        "plain_english": "Has online backup: odds of churning 13% lower"
+      },
+      {
+        "feature": "payment_method=Mailed check",
+        "label": "Payment method: Mailed check (vs Bank transfer (automatic))",
+        "coefficient": 0.11520262014631327,
+        "odds_ratio": 1.1221007747627738,
+        "direction": "raises risk",
+        "plain_english": "Payment method: Mailed check (vs Bank transfer (automatic)): odds of churning 1.12x higher"
+      },
+      {
+        "feature": "payment_method=Credit card (automatic)",
+        "label": "Payment method: Credit card (automatic) (vs Bank transfer (automatic))",
+        "coefficient": -0.03853568139095624,
+        "odds_ratio": 0.9621973715867012,
+        "direction": "lowers risk",
+        "plain_english": "Payment method: Credit card (automatic) (vs Bank transfer (automatic)): little difference in the odds of churning"
+      },
+      {
+        "feature": "partner",
+        "label": "Has a partner",
+        "coefficient": -0.008094728597201447,
+        "odds_ratio": 0.9919379454962512,
+        "direction": "lowers risk",
+        "plain_english": "Has a partner: little difference in the odds of churning"
+      },
+      {
+        "feature": "device_protection",
+        "label": "Has device protection",
+        "coefficient": -0.007965307701940264,
+        "odds_ratio": 0.9920663313009246,
+        "direction": "lowers risk",
+        "plain_english": "Has device protection: little difference in the odds of churning"
+      }
+    ],
+    "services_explain_charges_r2": 0.9988400165089509
+  },
+  "scenarios": {
+    "defaults": {
+      "discount": 0.15,
+      "save_rate": 0.25,
+      "stayer_uptake": 1.0,
+      "horizon_months": 12
+    },
+    "assumptions": [
+      "The offer is 15% off the monthly bill for 12 months.",
+      "25% of the people who would have left stay because of it. This is a guess. Only a proper test can measure it.",
+      "100% of the people who were staying anyway take the discount too, because nobody can tell in advance who is about to leave.",
+      "Each segment churns at the rate seen in this data.",
+      "Anyone kept stays the full 12 months and keeps paying what they pay now.",
+      "Money is billing, not profit. No cost to serve, no campaign costs.",
+      "Currency is US dollars. The data doesn't say, so that's an assumption too."
+    ],
+    "by_segment": [
+      {
+        "segment": "New High-Spend",
+        "discount": 0.15,
+        "save_rate": 0.25,
+        "stayer_uptake": 1.0,
+        "horizon_months": 12,
+        "customers_targeted": 831,
+        "expected_churners": 572.0,
+        "customers_saved": 143.0,
+        "stayers_subsidised": 259.0,
+        "revenue_saved": 143318.85,
+        "cost_on_saved": 21497.8275,
+        "cost_on_stayers": 37772.19,
+        "discount_cost": 59270.0175,
+        "net_benefit": 84048.8325,
+        "roi": 1.4180666051,
+        "break_even_save_rate": 0.0775157465
+      },
+      {
+        "segment": "New Standard",
+        "discount": 0.15,
+        "save_rate": 0.25,
+        "stayer_uptake": 1.0,
+        "horizon_months": 12,
+        "customers_targeted": 1238,
+        "expected_churners": 427.0,
+        "customers_saved": 106.75,
+        "stayers_subsidised": 811.0,
+        "revenue_saved": 54748.05,
+        "cost_on_saved": 8212.2075,
+        "cost_on_stayers": 52151.49,
+        "discount_cost": 60363.6975,
+        "net_benefit": -5615.6475,
+        "roi": -0.0930302107,
+        "break_even_save_rate": 0.2801683992
+      },
+      {
+        "segment": "Established Thin Bundle",
+        "discount": 0.15,
+        "save_rate": 0.25,
+        "stayer_uptake": 1.0,
+        "horizon_months": 12,
+        "customers_targeted": 499,
+        "expected_churners": 199.0,
+        "customers_saved": 49.75,
+        "stayers_subsidised": 300.0,
+        "revenue_saved": 47990.25,
+        "cost_on_saved": 7198.5375,
+        "cost_on_stayers": 43204.14,
+        "discount_cost": 50402.6775,
+        "net_benefit": -2412.4275,
+        "roi": -0.0478630823,
+        "break_even_save_rate": 0.2647850345
+      },
+      {
+        "segment": "Established Full Bundle",
+        "discount": 0.15,
+        "save_rate": 0.25,
+        "stayer_uptake": 1.0,
+        "horizon_months": 12,
+        "customers_targeted": 2261,
+        "expected_churners": 503.0,
+        "customers_saved": 125.75,
+        "stayers_subsidised": 1758.0,
+        "revenue_saved": 147633.9,
+        "cost_on_saved": 22145.085,
+        "cost_on_stayers": 298610.01,
+        "discount_cost": 320755.095,
+        "net_benefit": -173121.1949999999,
+        "roi": -0.5397301483,
+        "break_even_save_rate": 0.5948936764
+      },
+      {
+        "segment": "Established Low-Spend",
+        "discount": 0.15,
+        "save_rate": 0.25,
+        "stayer_uptake": 1.0,
+        "horizon_months": 12,
+        "customers_targeted": 2214,
+        "expected_churners": 168.0,
+        "customers_saved": 42.0,
+        "stayers_subsidised": 2046.0,
+        "revenue_saved": 23701.5,
+        "cost_on_saved": 3555.225,
+        "cost_on_stayers": 138836.52,
+        "discount_cost": 142391.745,
+        "net_benefit": -118690.245,
+        "roi": -0.8335472327,
+        "break_even_save_rate": null
+      }
+    ],
+    "recommended": {
+      "segment": "New High-Spend",
+      "discount": 0.15,
+      "save_rate": 0.25,
+      "stayer_uptake": 1.0,
+      "horizon_months": 12,
+      "customers_targeted": 831,
+      "expected_churners": 572.0,
+      "customers_saved": 143.0,
+      "stayers_subsidised": 259.0,
+      "revenue_saved": 143318.84999999998,
+      "cost_on_saved": 21497.827499999996,
+      "cost_on_stayers": 37772.189999999995,
+      "discount_cost": 59270.01749999999,
+      "net_benefit": 84048.83249999999,
+      "roi": 1.4180666050925328,
+      "break_even_save_rate": 0.0775157465124708
+    },
+    "top_revenue_at_risk_segment": "Established Full Bundle",
+    "top_revenue_at_risk_segment_month_to_month": {
+      "segment": "Established Full Bundle (month-to-month only)",
+      "discount": 0.15,
+      "save_rate": 0.25,
+      "stayer_uptake": 1.0,
+      "horizon_months": 12,
+      "customers_targeted": 860,
+      "expected_churners": 351.0,
+      "customers_saved": 87.75,
+      "stayers_subsidised": 509.0,
+      "revenue_saved": 102461.84999999999,
+      "cost_on_saved": 15369.277499999997,
+      "cost_on_stayers": 86571.44999999998,
+      "discount_cost": 101940.72749999998,
+      "net_benefit": 521.1225000000122,
+      "roi": 0.005112014724438889,
+      "break_even_save_rate": 0.2485041132525968,
+      "customers_in_segment": 2261
+    },
+    "n_segments_positive": 1
+  },
+  "queries": [
+    {
+      "file": "01_overall_churn.sql",
+      "question": "What share of customers churned, and how much recurring revenue left with them?"
+    },
+    {
+      "file": "02_churn_by_contract.sql",
+      "question": "Does contract length change how likely a customer is to leave, and where is the lost revenue concentrated?"
+    },
+    {
+      "file": "03_churn_by_tenure_bucket.sql",
+      "question": "How does churn change over the customer lifetime? Is the first year the danger zone?"
+    },
+    {
+      "file": "04_churn_by_payment_method.sql",
+      "question": "Do customers who pay manually churn more than those on automatic payment?"
+    },
+    {
+      "file": "05_churn_by_internet_service.sql",
+      "question": "Which internet product loses the most customers, and is it the high-revenue one?"
+    },
+    {
+      "file": "06_churn_by_addon_service.sql",
+      "question": "Among internet customers, do those who buy each add-on service churn less than those who do not?"
+    },
+    {
+      "file": "07_churn_by_service_count.sql",
+      "question": "Are customers who hold more services (more engaged) less likely to churn? This informs the engagement axis of the segmentation."
+    },
+    {
+      "file": "08_retention_curve_overall.sql",
+      "question": "Of every 100 customers who join, how many are still with us after N months? (Survival-style retention by tenure month.)"
+    },
+    {
+      "file": "09_retention_curve_by_contract.sql",
+      "question": "How differently do month-to-month, one-year and two-year customers survive over time?"
+    },
+    {
+      "file": "10_segment_summary.sql",
+      "question": "Which customer segments are largest, which churn most, and where is the most revenue at risk?"
+    },
+    {
+      "file": "11_segment_contract_mix.sql",
+      "question": "What contracts and internet products sit inside each segment? This shapes which retention action fits each one."
+    }
+  ]
+}
