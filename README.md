@@ -203,40 +203,5 @@ on screen against `reports/metrics.json`. `python scripts/take_screenshots.py` r
 while the app is running. Both scripts need Playwright, which I kept out of `requirements.txt`
 (`pip install playwright && playwright install chromium`). Generated 2026-10-11.
 
-## Talking points
 
-### The question
-I asked where a retention offer pays for itself, not just who's likely to leave. A churn score
-doesn't tell you what to spend.
 
-### The audit
-`TotalCharges` was text with blanks, and every blank was a customer at zero months, so I set them to zero
-instead of dropping or guessing. I read everything as text first and put a schema check in front, so bad
-input stops the pipeline.
-
-### The SQL
-Each question is its own SQL file with the question written at the top, using CTEs, CASE buckets and window
-functions. Every split is tested to add back up to the totals.
-
-### Retention
-I used Kaplan-Meier, written as a recursive CTE, after the literal reading of the churn flag said almost
-nobody lasts a year. Curves stop where fewer than 30 customers are left, so noise doesn't pass
-for a trend.
-
-### Segments
-I adapted RFM to tenure, monthly bill and number of services, using plain thresholds instead of quantiles,
-because ties in tenure made quantile cuts arbitrary. Five segments, each with one rule and one action.
-
-### The model
-A plain logistic regression scored 0.845 against 0.729 for a one-line contract rule,
-and I show both so the gain is clear. I dropped monthly charge once I saw it was nearly the sum of the
-services and was flipping signs.
-
-### The money
-The calculator charges the discount to everyone in the group, including people who were staying anyway,
-because that's how offers work. That one detail is why the segment with the most money at risk is the wrong
-place to discount.
-
-### What I'd do and where it's weak
-I'd test a contract-upgrade offer on New High-Spend against a holdout, because it breaks even at
-7.8%. It's a public sample, the save rate is a guess, and none of it proves cause.
